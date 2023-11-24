@@ -1,7 +1,4 @@
-<h1><%= @list.name %></h1>
-<ul><% @list.movies.each do |movie| %>
-<li><%= movie.title %></li>
-<%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
-</ul>
+<h1><Noms des listes</h1>
+<li><%= @list.name %></li>
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 <p><%= link_to "Retour aux listes", lists_path, class:'text-decoration-none' %></p>
